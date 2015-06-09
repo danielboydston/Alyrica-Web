@@ -76,14 +76,121 @@
 				margin-right: auto;
 				cursor: pointer;
 			}
+			#footer {
+				background-color: #3a4247;
+				padding-top: 20px;
+			}
 			#footer #footer-left{
 				float: left;
+				width: 33%;
 			}
 			#footer #footer-mid{
 				float: left;
+				width: 34%;
 			}
 			#footer #footer-right{
 				float: right;
+				width: 33%;
+			}
+			
+			#footer #footer-mid li{
+				list-style: none;
+			}
+			#footer #footer-mid li a{
+				background-image: url(img/link-arrow.png);
+				background-position: left;
+				background-repeat: no-repeat;
+				margin-left: -25px;
+				padding-left: 25px;
+			}
+			#footer li a, #footer p{
+				text-decoration: none;
+				color: white;
+				
+			}
+			#phone-number{
+				background-image: url(img/phone.png);
+				background-repeat: no-repeat;
+				background-position: left;
+				padding-left: 30px;
+			}
+			#email-address{
+				background-image: url(img/email.png);
+				background-repeat: no-repeat;
+				background-position: left top;
+				padding-left: 30px;
+				text-decoration: none;
+				color: white;
+			}
+			#address{
+				background-image: url(img/address.png);
+				background-repeat: no-repeat;
+				background-position: left;
+				padding-left: 30px;
+			}
+			#footer h2{
+				color: #59b200;
+				font-size: 1.5em;
+			}
+			#footer h3{
+				color: #59b200;
+				font-size: 1.2em;
+			}
+			#social-links{
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 12px;
+				margin-bottom: 9px;
+				width: 176px;
+				padding: 0;
+			}
+			#footer-mid h2:first-child{
+				margin-top: 40px;
+			}
+			.social-link{
+				background-repeat: no-repeat;
+				background-position: center;
+				padding: 18px 20px;
+				margin: 0 2px;
+			}
+			#link-facebook{
+				background-image: url(img/facebook.png);
+			}
+			#link-google{
+				background-image: url(img/google.png);
+			}
+			#link-twitter{
+				background-image: url(img/twitter.png);
+			}
+			#link-youtube{
+				background-image: url(img/youtube.png);
+			}
+			#social-snippets{
+				margin-top: 25px;
+			}
+			.testimony{
+				padding-left: 35px;
+				padding-bottom: 5px;
+			}
+			.testimony.twitter{
+				background-image: url(img/twitter-white.png);
+				background-repeat: no-repeat;
+			}
+			.testimony.facebook{
+				background-image: url(img/facebook-white.png);
+				background-repeat: no-repeat;
+			}
+			.testimony.google{
+				background-image: url(img/google-white.png);
+				background-repeat: no-repeat;
+			}
+			.testimony.youtube{
+				background-image: url(img/youtube-white.png);
+				background-repeat: no-repeat;
+			}
+			footer {
+				clear: both;
+				text-align: center;
 			}
 			
 		</style>
@@ -206,26 +313,26 @@
 
 		<hr>
 	</div>
+	
 	<div id="footer" class="container">
 		<div id="footer-left" class="container">
 			<img id="footer-logo" src="img/footer-logo.png">
 			<p id="company-desc">Alyrica Networks has been providing friendlier internet since 2001.</p>
 			<address>
-				<p>Address:</p>
-				<p>521B N 19<sup>th</sup> St.<br>Philomath, OR<br>97370</p>
+				<p id="address">Address:<br>521B N 19<sup>th</sup> St.<br>Philomath, OR  97370</p>
 			</address>
 			<div id="footer-phone">
-				<img src="img/phone.png">
-				<p>Phone: (541) 929-3330</p>
+				<!--<img src="img/phone.png">-->
+				<p id="phone-number">Phone: (541) 929-3330</p>
 			</div>
 			<div id="footer-email">
-				<img src="img/email.png">
-				<p>E-Mail: sales@alyrica.net</p>
+				<!--<img src="img/email.png">-->
+				<a id="email-address" href="#email">E-Mail: sales@alyrica.net</a>
 			</div>
 		</div>
 		<div id="footer-mid" class="container">
 			<h2>Quick Links</h2>
-			<ul>
+			<ul id="quick-links"">
 				<li>
 					<a href="#home">Home</a>
 				</li>
@@ -237,7 +344,7 @@
 				</li>
 			</ul>
 			<h2>Legal</h2>
-			<ul>
+			<ul id="legal">
 				<li>
 					<a href="#tos">Terms of Service</a>
 				</li>
@@ -260,20 +367,26 @@
 		</div>
 		<div id="footer-right" class="container">
 			<div id="social-links" class="container">
+				<a id="link-facebook" class="social-link" href="#facebook"> </a>
+				<a id="link-google" class="social-link" href="#google"> </a>
+				<a id="link-twitter" class="social-link" href="#twitter"> </a>
+				<a id="link-youtube" class="social-link" href="#youtube"> </a>
+				<!--
 				<img src="img/facebook.png">
 				<img src="img/google.png">
 				<img src="img/twitter.png">
 				<img src="img/youtube.png">
+				-->
 			</div>
 			<div id="social-snippets">
-				<h3><time datetime="2015-06-06">June 6<sup>th</sup>, 2015</time><h3>
-				<p>Alyrica Rocks!<p>
-				<h3><time datetime="2015-06-07">June 7<sup>th</sup>, 2015</time><h3>
-				<p>I love Alyrica Internet!<p>
+				<h3><time datetime="2015-06-06">June 6<sup>th</sup>, 2015</time></h3>
+				<p class="testimony google">Alyrica Rocks!</p>
+				<h3><time datetime="2015-06-07">June 7<sup>th</sup>, 2015</time></h3>
+				<p class="testimony facebook">I love Alyrica Internet!</p>
 			</div>
 		</div>
 		<footer>
-			<p>&copy; 2015 Alyrica Networks, Inc.  All rights reserved.</p>
+			<p><em>&copy; 2015 Alyrica Networks, Inc.  All rights reserved.<em></p>
 		</footer>
 	</div>        
 		<!--
